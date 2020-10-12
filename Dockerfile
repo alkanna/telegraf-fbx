@@ -6,4 +6,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 RUN pip3 install requests pyyaml requests unidecode
 
-RUN wget https://raw.githubusercontent.com/bruno78310/Freebox-Revolution-Monitoring/master/freebox_059.py -O /usr/local/py/freebox_059.py
+RUN mkdir /usr/local/py && wget https://raw.githubusercontent.com/bruno78310/Freebox-Revolution-Monitoring/master/freebox_059.py -O /usr/local/py/freebox_059.py
