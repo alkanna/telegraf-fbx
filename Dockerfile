@@ -8,7 +8,7 @@ RUN pip3 install requests pyyaml requests unidecode
 
 RUN mkdir /usr/local/py && wget https://raw.githubusercontent.com/bruno78310/Freebox-Revolution-Monitoring/master/freebox_059.py -O /usr/local/py/freebox_059.py
 
-RUN apt-get install gnupg1 apt-transport-https dirmngr
+RUN apt-get install gnupg gnupg2 gnupg1 apt-transport-https dirmngr
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 RUN echo "deb https://ookla.bintray.com/debian $(lsb_release -sc) main" | sudo tee  /etc/apt/sources.list.d/speedtest.list
